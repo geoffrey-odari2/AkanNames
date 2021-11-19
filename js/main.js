@@ -9,17 +9,23 @@ const maleNames = ["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw","Kofi"];
 const femaleNames =["Akosua","Adwoa","Abenaa","Akua","Yaa","Afua","Ama"];
 const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 
-let gender = prompt("Please enter your gender ");
-let yearOfBirth = prompt("Please enter year of birth: ");
-let monthOfBirth = prompt("Please enter month ");
-let dateOfBirth = prompt("Please enter date ");
 
 
-console.log(getDayOfWeek(parseInt(yearOfBirth),parseInt(monthOfBirth),parseInt(dateOfBirth)))
 
-if(gender.toLowerCase()=="male"){
-    alert(maleNames[getDayOfWeek(parseInt(yearOfBirth),parseInt(monthOfBirth),parseInt(dateOfBirth))])
-}else if (gender.toLowerCase()=="female") {
-    alert(femaleNames[getDayOfWeek(parseInt(yearOfBirth),parseInt(monthOfBirth),parseInt(dateOfBirth))])
-}
+document.querySelector("#submit").addEventListener("click",()=>{
+    let gender = document.querySelector("#gender").value//prompt("Please enter your gender ");
+    let yearOfBirth = document.querySelector("#year").value//prompt("Please enter year of birth: ");
+    let monthOfBirth = document.querySelector("#month").value//prompt("Please enter month ");
+    let dateOfBirth = document.querySelector("#date").value//prompt("Please enter date ");
+    console.log(getDayOfWeek(parseInt(yearOfBirth),parseInt(monthOfBirth),parseInt(dateOfBirth)))
+
+        if(gender.toLowerCase()=="male"){
+            alert(maleNames[getDayOfWeek(parseInt(yearOfBirth),parseInt(monthOfBirth),parseInt(dateOfBirth))])
+        }else if (gender.toLowerCase()=="female") {
+            alert(femaleNames[getDayOfWeek(parseInt(yearOfBirth),parseInt(monthOfBirth),parseInt(dateOfBirth))])
+        }
+
+})
+
+
 

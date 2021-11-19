@@ -1,0 +1,39 @@
+body{
+    font-family: sans-serif
+}
+
+.main{
+    border:solid 1px pink;
+    width: 500px;
+    margin:auto;
+    margin-top:50px;
+    background: pink;
+    padding:10px;
+}
+
+.input-group{
+    width:90%;
+    margin: auto;
+    padding:0.5em;
+}
+
+.user-label{
+    font-size: x-large;
+    display:inline-block;
+    width: 40%;  
+}
+
+.user-input{
+    font-size: x-large;
+    width:40%;
+    border: pink;
+    background: powderblue;
+    
+}
+
+.user-button{
+    width:100%;
+    background: red;
+    color: white;
+    font-size: x-large;
+}
