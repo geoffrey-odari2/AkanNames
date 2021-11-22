@@ -4,11 +4,12 @@ body{
 
 .main{
     border:solid 1px pink;
-    width: 500px;
+    border-radius:15px;
+    width: 300px;
     margin:auto;
     margin-top:50px;
-    background: pink;
-    padding:10px;
+    background: #ffb20f;
+    padding:20px;
 }
 
 .input-group{
@@ -17,23 +18,24 @@ body{
     padding:0.5em;
 }
 
-.user-label{
-    font-size: x-large;
+label{
+    font-size: large;
     display:inline-block;
     width: 40%;  
 }
 
-.user-input{
-    font-size: x-large;
+select,input{
+    font-size: large;
     width:40%;
     border: pink;
-    background: powderblue;
+    background: #ffe548;
     
 }
 
-.user-button{
-    width:100%;
-    background: red;
-    color: white;
-    font-size: x-large;
+button{
+    display:block;
+    margin:auto;
+    background: #582707;
+    color: #ffe548;
+    font-size: large;
 }
