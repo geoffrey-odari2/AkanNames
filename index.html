@@ -3,12 +3,31 @@
     <head>
         <title>Ghanaian Day Names</title>
         <link rel="stylesheet" href="css/styles.css"/>
-        <script src="js/dom.js" defer></script>
         <script src="js/main.js" defer></script>
     </head>
     <body>
         <div id="main" class="main">
-
+            <h3>Please Enter your Details</h3>
+            <div class="input-group">
+                <label>Year</label>
+                <input type="text" id="year">
+            </div>
+            <div class="input-group">
+                <label>Month</label>
+                <input type="text" id="month">
+            </div>
+            <div class="input-group">
+                <label>Date</label>
+                <input type="text" id="date">
+            </div>
+            <div class="input-group">
+                <label>Gender</label>
+                <select  id="gender">
+                    <option>Male</option>
+                    <option>Female</option>
+                </select>
+            </div>
+            <button id="submit">Submit</button>
         </div>
     </body>
 </html>
