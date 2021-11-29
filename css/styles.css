@@ -1,20 +1,58 @@
+html{
+    margin:0;
+    padding:0;
+}
+
 body{
-    font-family: sans-serif
+    font-family: sans-serif;
+    padding:0;
+    margin:0;
+}
+
+nav{
+    background: #ffb20f;
+    padding:10px;
+}
+
+nav h1{
+    display:inline-block;
+}
+
+img{
+    height:40px;
+    padding:0;
 }
 
 .container{
     display:grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 45% 45%;
     width:90%;
-    margin: auto;
+    margin: 0;
+    position: absolute;
+    top: 20%;
+    left:5%;
+    right:5%;
+    border: 2px dashed #582707;
+    column-gap: 10%;
+    border-radius: 15px;
+    padding:10px;
 }
 
 .main{
     border:solid 1px pink;
     border-radius:15px;
-    margin:auto;
     background: #ffb20f;
     padding:20px;
+}
+
+.main h3{
+    text-align: center;
+}
+
+.main p span{
+    background: #582707;
+    color: #ffe548;
+    font-weight: bold;
 }
 
 .input-group{
@@ -43,6 +81,7 @@ button{
     background: #582707;
     color: #ffe548;
     font-size: large;
+    margin-top: 5%;
 }
 hr{
     border: none;
