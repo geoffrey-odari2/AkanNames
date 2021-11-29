@@ -13,11 +13,11 @@ const  gender= document.querySelector("#gender")//prompt("Please enter your gend
 const yearOfBirth = document.querySelector("#year")//prompt("Please enter year of birth: ");
 const monthOfBirth = document.querySelector("#month")//prompt("Please enter month ");
 const dateOfBirth = document.querySelector("#date")//prompt("Please enter date ");
-
+//error collector
 let errors = []
 
-
-function errorCheck(){
+//Error checker
+const  errorCheck=()=>{
     if(gender.value == ''|| yearOfBirth.value == ''|| monthOfBirth.value== ''||dateOfBirth.value==''){
         errors.push("please fill in all the details")
     }else if(parseInt(monthOfBirth.value)<= 0||parseInt(monthOfBirth.value)>12){
@@ -48,21 +48,19 @@ function errorCheck(){
 
 document.querySelector("#submit").addEventListener("click",()=>{
 
-    
+    //check for errors
     errorCheck()
 
     if (errors.length>0){
         alert(errors.map(data=>`${data} \n`))
 
     }else{
-        //console.log(getDayOfWeek(parseInt(yearOfBirth.value),parseInt(monthOfBirth.value),parseInt(dateOfBirth.value)))
+        //render the output
         let divider = document.createElement('hr')
         document.querySelector('#main').appendChild(divider)
         let message = document.createElement('h3')
         message.textContent = "You were born on a "
         let resultMessage = document.createElement('span')
-
-        
         message.textContent = "Your Akan name is "
         resultMessage.textContent = (gender.value.toLowerCase()=="male")?maleNames[getDayOfWeek(parseInt(yearOfBirth.value),parseInt(monthOfBirth.value),parseInt(dateOfBirth.value))]:femaleNames[getDayOfWeek(parseInt(yearOfBirth.value),parseInt(monthOfBirth.value),parseInt(dateOfBirth.value))]
         message.appendChild(resultMessage)
@@ -70,9 +68,8 @@ document.querySelector("#submit").addEventListener("click",()=>{
 
     }
 
-    
+    //clear the errors
     errors=[]
-   // console.log((gender.value.toLowerCase()=="male")?maleNames[getDayOfWeek(parseInt(yearOfBirth.value),parseInt(monthOfBirth.value),parseInt(dateOfBirth.value))]:femaleNames[getDayOfWeek(parseInt(yearOfBirth.value),parseInt(monthOfBirth.value),parseInt(dateOfBirth.value))])
 
 })
 
