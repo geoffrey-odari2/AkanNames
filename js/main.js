@@ -1,22 +1,31 @@
+
+//Name Arrays
+const maleNames = ["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw","Kofi","Kwame"];
+const femaleNames =["Akosua","Adwoa","Abenaa","Akua","Yaa","Afua","Ama"];
+
+//Weekday Arrays
+const day = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+//Error collector array
+let errors = []
+
+
+//input for gender
+const  gender= document.querySelector("#gender")//prompt("Please enter your gender ");
+//input for year
+const yearOfBirth = document.querySelector("#year")//prompt("Please enter year of birth: ");
+//input for month
+const monthOfBirth = document.querySelector("#month")//prompt("Please enter month ");
+//input for date
+const dateOfBirth = document.querySelector("#date")
+
 //calculating day of week
-function getDayOfWeek   (y,m,d){
+const getDayOfWeek  =  (y,m,d)=>{
     let t = [0,3,2,5,0,3,5,1,4,6,2,4]
     y -= m < 3;
     return Math.floor((y + y/4 - y/100 + y/400 + t[m-1] + d) % 7);
 }
 
-const maleNames = ["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw","Kofi","Kwame"];
-const femaleNames =["Akosua","Adwoa","Abenaa","Akua","Yaa","Afua","Ama"];
-const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
-const day = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
-const  gender= document.querySelector("#gender")//prompt("Please enter your gender ");
-const yearOfBirth = document.querySelector("#year")//prompt("Please enter year of birth: ");
-const monthOfBirth = document.querySelector("#month")//prompt("Please enter month ");
-const dateOfBirth = document.querySelector("#date")//prompt("Please enter date ");
-//error collector
-let errors = []
-
-//Error checker
+//Function for checking input Error
 const  errorCheck=()=>{
     if(gender.value == ''|| yearOfBirth.value == ''|| monthOfBirth.value== ''||dateOfBirth.value==''){
         errors.push("please fill in all the details")
@@ -43,12 +52,10 @@ const  errorCheck=()=>{
 }
 
 
-
-
-
+//Event listener for click in a button
 document.querySelector("#submit").addEventListener("click",()=>{
 
-    //check for errors
+    //Check for errors
     errorCheck()
 
     if (errors.length>0){
@@ -60,10 +67,9 @@ document.querySelector("#submit").addEventListener("click",()=>{
         let dayOfWeek =day[dayNumber]
         let akanName = (gender.value.toLowerCase()=="male")?maleNames[dayNumber]:femaleNames[dayNumber]
         document.querySelector("#output").innerHTML =`<p>Congratulations! You were born on a ${dayOfWeek} and your Akan name  is <span>${akanName}</span></p>`
-
     }
 
-    //clear the errors
+    //Clear the errors from array
     errors=[]
 
 })
