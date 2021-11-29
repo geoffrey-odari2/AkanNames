@@ -2,12 +2,17 @@ body{
     font-family: sans-serif
 }
 
+.container{
+    display:grid;
+    grid-template-columns: 50% 50%;
+    width:90%;
+    margin: auto;
+}
+
 .main{
     border:solid 1px pink;
     border-radius:15px;
-    width: 300px;
     margin:auto;
-    margin-top:50px;
     background: #ffb20f;
     padding:20px;
 }
@@ -42,4 +47,26 @@ button{
 hr{
     border: none;
    border-top:2px dashed #582707;
+}
+.names{
+    border: solid #582707 1px;
+    border-collapse: collapse;
+    width:100%;
+    background:#ffe4482c;
+    
+
+}
+
+.names th{
+    color: #582707;
+    background: #ffb20f;
+    text-align: left;
+    padding: 8px;
+    
+}
+
+.names td, .names tr{
+        border: 1px solid #ffe548;
+        padding: 8px;
+        border-radius:15px;
 }
