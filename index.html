@@ -6,97 +6,106 @@
         <script src="js/main.js" defer></script>
     </head>
     <body>
-        <p>Akan names are derived from Ghanian culture. Frequently in Ghana, children are given their first name as a 'day name' which corresponds to the day in the week they were born. Here are Ghanian day names.</p>
-       
-       <div class="container">
-        <table class="names">
-            <thead>
-                <tr>
-                    <th>Day</th>
-                    <th>Males</th>
-                    <th>Females</th>
-                </tr>
-            </thead>           
-            <tbody>
-                <tr>
-                    <td>Sunday</td>
-                    <td>Kwasi</td>
-                    <td>Akosua</td>
-                </tr>
-                <tr>
-                    <td>Monday</td>
-                    <td>Kwadwo</td>
-                    <td>Adwoa</td>
-                </tr>
-                <tr>
-                    <td>Tuesday</td>
-                    <td>Kwabena</td>
-                    <td>Abenaa</td>
-                </tr>
-                <tr>
-                    <td>Wednesday</td>
-                    <td>Kwaku</td>
-                    <td>Akua</td>
-                </tr>
-                <tr>
-                    <td>Thursday</td>
-                    <td>Yaw</td>
-                    <td>Yaa</td>
-                </tr>
-                <tr>
-                    <td>Friday</td>
-                    <td>Kofi</td>
-                    <td>Afua</td>
-                </tr>
-                <tr>
-                    <td>Saturday</td>
-                    <td>Kwame</td>
-                    <td>Ama</td>
-                </tr>
-                
-            </tbody>
-        </table>
+        <nav>
+            <img src="img/Flag_of_Ghana.png">
+            <h1>Akan Names</h1>
+        </nav>
         
-        <div id="main" class="main">
-            <h3>Please Enter your Details</h3>
-            <div class="input-group">
-                <label>Year</label>
-                <input type="text" id="year">
+        <div class="container">
+            <div>
+                <p>Akan names are derived from Ghanian culture. Frequently in Ghana, children are given their first name as a 'day name' which corresponds to the day in the week they were born. Here are Ghanian day names.</p>
+                <table class="names">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Males</th>
+                            <th>Females</th>
+                        </tr>
+                    </thead>           
+                    <tbody>
+                        <tr>
+                            <td>Sunday</td>
+                            <td>Kwasi</td>
+                            <td>Akosua</td>
+                        </tr>
+                        <tr>
+                            <td>Monday</td>
+                            <td>Kwadwo</td>
+                            <td>Adwoa</td>
+                        </tr>
+                        <tr>
+                            <td>Tuesday</td>
+                            <td>Kwabena</td>
+                            <td>Abenaa</td>
+                        </tr>
+                        <tr>
+                            <td>Wednesday</td>
+                            <td>Kwaku</td>
+                            <td>Akua</td>
+                        </tr>
+                        <tr>
+                            <td>Thursday</td>
+                            <td>Yaw</td>
+                            <td>Yaa</td>
+                        </tr>
+                        <tr>
+                            <td>Friday</td>
+                            <td>Kofi</td>
+                            <td>Afua</td>
+                        </tr>
+                        <tr>
+                            <td>Saturday</td>
+                            <td>Kwame</td>
+                            <td>Ama</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
             </div>
-            <div class="input-group">
-                <label>Month</label>
-                <select id="month">
-                    <option value="">--select--</option>
-                    <option value="1">January</option>
-                    <option value="2">February</option>
-                    <option value="3">March</option>
-                    <option value="4">April</option>
-                    <option value="5">May</option>
-                    <option value="6">June</option>
-                    <option value="7">July</option>
-                    <option value="8">August</option>
-                    <option value="9">September</option>
-                    <option value="10">October</option>
-                    <option value="11">November</option>
-                    <option value="12">December</option>
-                </select>
+            <div>
+                <p>Find out your Ghanaian 'day name' by entering your birthday details below</p>
+                <div id="main" class="main">
+                    <h3>Please enter your details</h3>
+                    <div class="input-group">
+                        <label>Year</label>
+                        <input type="text" id="year">
+                    </div>
+                    <div class="input-group">
+                        <label>Month</label>
+                        <select id="month">
+                            <option value="">--select--</option>
+                            <option value="1">January</option>
+                            <option value="2">February</option>
+                            <option value="3">March</option>
+                            <option value="4">April</option>
+                            <option value="5">May</option>
+                            <option value="6">June</option>
+                            <option value="7">July</option>
+                            <option value="8">August</option>
+                            <option value="9">September</option>
+                            <option value="10">October</option>
+                            <option value="11">November</option>
+                            <option value="12">December</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label>Date</label>
+                        <input type="text" id="date">
+                    </div>
+                    <div class="input-group">
+                        <label>Gender</label>
+                        <select  id="gender">
+                            <option value="">--Select--</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </div>
+                    <button id="submit">Submit</button>
+                    <div id="output">
+        
+                    </div>
+                </div>
             </div>
-            <div class="input-group">
-                <label>Date</label>
-                <input type="text" id="date">
-            </div>
-            <div class="input-group">
-                <label>Gender</label>
-                <select  id="gender">
-                    <option value="">--Select--</option>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                </select>
-            </div>
-            <button id="submit">Submit</button>
         </div>
-       </div>
-       
-        
     </body>
 </html>
