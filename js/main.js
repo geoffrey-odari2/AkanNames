@@ -8,7 +8,7 @@ function getDayOfWeek   (y,m,d){
 const maleNames = ["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw","Kofi","Kwame"];
 const femaleNames =["Akosua","Adwoa","Abenaa","Akua","Yaa","Afua","Ama"];
 const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
-const day = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+const day = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
 const  gender= document.querySelector("#gender")//prompt("Please enter your gender ");
 const yearOfBirth = document.querySelector("#year")//prompt("Please enter year of birth: ");
 const monthOfBirth = document.querySelector("#month")//prompt("Please enter month ");
@@ -52,19 +52,14 @@ document.querySelector("#submit").addEventListener("click",()=>{
     errorCheck()
 
     if (errors.length>0){
-        alert(errors.map(data=>`${data} \n`))
+        alert(errors.map(data=>`${data}`))
+        document.querySelector("#output").innerHTML =`<p>Error: <span>${errors.map(data=>`${data}`)}</span></p>`
 
     }else{
-        //render the output
-        let divider = document.createElement('hr')
-        document.querySelector('#main').appendChild(divider)
-        let message = document.createElement('h3')
-        message.textContent = "You were born on a "
-        let resultMessage = document.createElement('span')
-        message.textContent = "Your Akan name is "
-        resultMessage.textContent = (gender.value.toLowerCase()=="male")?maleNames[getDayOfWeek(parseInt(yearOfBirth.value),parseInt(monthOfBirth.value),parseInt(dateOfBirth.value))]:femaleNames[getDayOfWeek(parseInt(yearOfBirth.value),parseInt(monthOfBirth.value),parseInt(dateOfBirth.value))]
-        message.appendChild(resultMessage)
-        document.querySelector('#main').appendChild(message)
+        let dayNumber = getDayOfWeek(parseInt(yearOfBirth.value),parseInt(monthOfBirth.value),parseInt(dateOfBirth.value))
+        let dayOfWeek =day[dayNumber]
+        let akanName = (gender.value.toLowerCase()=="male")?maleNames[dayNumber]:femaleNames[dayNumber]
+        document.querySelector("#output").innerHTML =`<p>Congratulations! You were born on a ${dayOfWeek} and your Akan name  is <span>${akanName}</span></p>`
 
     }
 
