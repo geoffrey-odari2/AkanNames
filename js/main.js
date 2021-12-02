@@ -51,6 +51,19 @@ const  errorCheck=()=>{
 
 }
 
+//function for clearing inputs
+const clearInputs = ()=>{
+    //input for gender
+    gender.options[0].selected='true'
+    //input for year
+    yearOfBirth.value = "";
+    //input for month
+    monthOfBirth.options[0].selected='true'
+    //input for date
+    dateOfBirth.value=""
+}
+
+
 
 //Event listener for click in a button
 document.querySelector("#submit").addEventListener("click",()=>{
@@ -71,8 +84,13 @@ document.querySelector("#submit").addEventListener("click",()=>{
 
     //Clear the errors from array
     errors=[]
+    //clear inputs
+    clearInputs()
 
 })
+
+
+
 
 
 
