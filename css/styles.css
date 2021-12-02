@@ -1,7 +1,4 @@
-html{
-    margin:0;
-    padding:0;
-}
+
 
 body{
     font-family: sans-serif;
@@ -18,9 +15,15 @@ nav h1{
     display:inline-block;
 }
 
-img{
+nav img{
     height:40px;
     padding:0;
+}
+
+.container img{
+    height:100px;
+    float: left;
+    padding:10px;
 }
 
 .container{
