@@ -1,6 +1,6 @@
 # Akan Names
 
-#### Akan Names is site for displaying Akan tribal first names based of birthdays, 2 December 2021
+#### Akan Names is site for displaying Akan tribal first names based on their birthdays, 2 December 2021
 #### By **Geoffrey Odari**
 
 
