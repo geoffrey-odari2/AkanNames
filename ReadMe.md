@@ -10,7 +10,7 @@ The site also allows users to enter their birthday and gender to get to know wha
 
 ## Url
 
-Access the site using the url  [pip](https://pip.pypa.io/en/stable/) .
+Access the site using the url https://geoffrey-odari2.github.io/AkanNames/.
 
 ```bash
 pip install foobar
