@@ -5,7 +5,7 @@
 
 
 ## Description
-This is a site educates its users about the Ghanaian tribe of Akan which uses a naming system based on the days of the week and gender. 
+This is a site  that educates its users about the Ghanaian tribe of Akan, which has a naming system based on the days of the week and gender. 
 The site also allows users to enter their birthday and gender to get to know what their Akan tribal first name would be.  The site is developed using HTML5, CSS and Javascript.
 
 ## Url
