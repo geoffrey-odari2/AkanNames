@@ -2,7 +2,8 @@
 //Name Arrays
 const maleNames = ["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw","Kofi","Kwame"];
 const femaleNames =["Akosua","Adwoa","Abenaa","Akua","Yaa","Afua","Ama"];
-
+//Months of the year
+const month =["January","February","March","April","May","June","July","August","September","October","November","December"]
 //Weekday Arrays
 const day = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
 //Error collector array
@@ -41,7 +42,7 @@ const  errorCheck=()=>{
         }       
     }else if(parseInt(monthOfBirth.value)==2){
         if(parseInt(yearOfBirth.value)%4==0&&parseInt(dateOfBirth.value)>29){
-            errors.push(`Date can not be greater than 29 in the month of ${month[parseInt(monthOfBirth.value)-1]}`);
+            errors.push(`Date can not be greater than 29 in the month of ${month[parseInt(monthOfBirth.value)-1]} in a Leap year`);
         }else if(parseInt(yearOfBirth.value)%4!=0&&parseInt(dateOfBirth.value)>28){
             errors.push(`Date can not be greater than 28 in the month of ${month[parseInt(monthOfBirth.value)-1]}`);
         }
@@ -61,6 +62,7 @@ const clearInputs = ()=>{
     monthOfBirth.options[0].selected='true'
     //input for date
     dateOfBirth.value=""
+  
 }
 
 
@@ -79,13 +81,16 @@ document.querySelector("#submit").addEventListener("click",()=>{
         let dayNumber = getDayOfWeek(parseInt(yearOfBirth.value),parseInt(monthOfBirth.value),parseInt(dateOfBirth.value))
         let dayOfWeek =day[dayNumber]
         let akanName = (gender.value.toLowerCase()=="male")?maleNames[dayNumber]:femaleNames[dayNumber]
-        document.querySelector("#output").innerHTML =`<p>Congratulations! You were born on a ${dayOfWeek} and your Akan name  is <span>${akanName}</span></p>`
+        document.querySelector("#output").innerHTML =`<hr><p>Congratulations! You were born on a ${dayOfWeek} and your Akan name  is <span>${akanName}</span></p>`
+        //clear inputs
+        clearInputs()
+        
     }
 
     //Clear the errors from array
     errors=[]
-    //clear inputs
-    clearInputs()
+    
+    
 
 })
 
