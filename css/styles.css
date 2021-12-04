@@ -114,6 +114,11 @@ hr{
         border-radius:15px;
 }
 
+#output p{
+    font-size: x-large;
+    text-align: center;
+}
+
 @media screen and (max-width: 820px) {
     .container{
         display:grid;
