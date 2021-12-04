@@ -2,7 +2,7 @@
 
 #### Akan Names is site for displaying Akan tribal first names based on their birthdays, 2 December 2021
 #### By **Geoffrey Odari**
-
+#### Email **geoffrey.ochenge@gmail.com**
 
 ## Description
 This is a site  that educates its users about the Ghanaian tribe of Akan, which has a naming system based on the days of the week and gender. 
